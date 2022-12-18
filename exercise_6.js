@@ -26,5 +26,11 @@ function findElementsApprearMoreOnce(arr) {
   return result;
 }
 
+// function findElementsApprearMoreOnce(arr) {
+//   return Array.from(
+//     new Set(arr.filter((ele, idx) => arr.indexOf(ele, idx + 1) !== -1))
+//   );
+// }
+
 const arr1 = [1, 2, 3, 4, 2, 3, 5, 3, 1, 1, 5, 2, 3];
 console.log(findElementsApprearMoreOnce(arr1));

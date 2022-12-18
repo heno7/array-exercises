@@ -7,7 +7,7 @@ function findTwoWithSum(arr, sum) {
   const matchedNumbers = [];
   for (let i = 0; i < arr.length; i++) {
     let matchElement = sum - arr[i];
-    matchElement = arr.find((ele) => ele === matchElement);
+    matchElement = arr.find((ele, idx) => ele === matchElement && idx !== i);
     if (
       matchElement &&
       matchedNumbers.indexOf(matchElement) === -1 &&
@@ -22,3 +22,5 @@ function findTwoWithSum(arr, sum) {
 }
 
 console.log(findTwoWithSum([1, 7, 9, 2, 5, 3, 8], 12));
+console.log(findTwoWithSum([1, 7, 9, 2, 5, 3, 8], 10));
+console.log(findTwoWithSum([1, 7, 9, 2, 5, 5, 3, 8], 10));
